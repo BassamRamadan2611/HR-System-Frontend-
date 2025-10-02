@@ -1,20 +1,27 @@
-🚀 HR Management System (Frontend - Angular)
+🌐 HRMS Frontend — Angular + TailwindCSS
 
-A Human Resource Management System (HRMS) built with Angular, featuring separate Admin and User/Manager panels.
-Includes authentication, role-based access control, and a modular architecture for scalability.
+Modern, responsive Human Resource Management System (HRMS) frontend built with Angular.
+Provides role-based dashboards for Employees, Managers, and Admins with a clean UX/UI.
+
+🚀 Project Summary
+
+This repository contains the frontend application of the HRMS.
+It focuses on usability, performance, and accessibility, offering an interface for daily HR tasks such as attendance, leaves, profiles, team management, and admin workflows.
+
+Note: Backend APIs are consumed but not included here (this repo demonstrates only frontend architecture, UI/UX, and Angular skills).
 
 ✨ Features
 👨‍💼 User Panel
 
-Personal dashboard
+Personal Dashboard
 
 Profile management
 
-Submit leave requests
+Submit Leave Requests
 
-Submit attendance requests
+Submit Attendance Requests
 
-Managers: manage their own teams
+Managers: Manage their own team
 
 🛠️ Admin Panel
 
@@ -22,56 +29,94 @@ Employee management
 
 Department management
 
-User & role management
+User & Role management
 
 Attendance approvals
 
 Leave approvals
 
-Payroll (under development)
+Payroll (in progress)
 
-Performance reviews (under development)
+Performance Reviews (in progress)
 
 🔑 Shared
 
-JWT authentication (Login / Register)
+JWT-based Authentication (Login / Register)
 
-Role-based guards for access control
+Role-based route guards (User / Manager / Admin)
 
-Reusable components & services
+Reusable components (forms, modals, tables)
 
 🧩 Project Structure
 
-Shared Module → Authentication, guards, reusable UI & services
+Shared Module → Authentication, guards, services, reusable UI
 
-User Module → Employee & manager features
+User Module → Employee & Manager features
 
-Admin Module → HR management & approvals
+Admin Module → HR management features
 
 🛠️ Tech Stack
 
 ⚡ Angular (latest)
 
-🟦 TypeScript
+🎨 TailwindCSS for responsive UI
 
-🎨 TailwindCSS for styling
+🟦 TypeScript
 
 🔑 JWT Authentication
 
-🛡 Role-based Guards
+🛡 Route Guards (role-based access)
+
+🗺️ Routes Overview
+
+User Panel (/user)
+
+/user → Dashboard
+
+/user/profile → Profile
+
+/user/leave-request → Leave request
+
+/user/attendance-request → Attendance request
+
+/user/team → Team (manager only)
+
+Admin Panel (/admin)
+
+/admin → Dashboard
+
+/admin/departments → Departments
+
+/admin/employees → Employees
+
+/admin/users → Users
+
+/admin/leaves → Leaves
+
+/admin/attendance → Attendance
+
+/admin/payroll → Payroll (WIP)
+
+/admin/reviews → Performance Reviews (WIP)
+
+Auth
+
+/login, /register
 
 🚧 Status
 
-✅ Core modules completed
+✅ Core Modules completed
 
-🚀 Payroll & Performance Review modules in progress
+🚀 Payroll & Performance Review modules in development
 
 📌 Highlights
 
-📂 Modular architecture for scalability
+📂 Modular architecture (Shared, User, Admin)
 
-🔒 Role-based routing (Admin / User / Manager)
+🔒 Role-based routing (User / Manager / Admin)
 
-🎨 Clean UI & UX with Angular + Tailwind
+🎨 Clean UI & UX with TailwindCSS
 
-🧑‍💻 Best practices in guards, services & lazy-loaded modules
+⚡ Optimized with lazy loading & small bundles
+
+♿ Accessibility-first design (a11y)
