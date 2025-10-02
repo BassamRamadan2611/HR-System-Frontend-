@@ -1,0 +1,212 @@
+<div class="flex min-h-screen bg-gray-50">
+  <!-- Overlay for mobile sidebar -->
+  <div *ngIf="isSidebarOpen" class="fixed inset-0 z-20 bg-black bg-opacity-50 md:hidden" (click)="toggleSidebar()"></div>
+
+  <!-- Sidebar -->
+  <div class="bg-gradient-to-b from-blue-800 to-indigo-900 text-white w-64 space-y-8 py-7 px-4 fixed inset-y-0 left-0 z-30 transform transition-transform duration-300 ease-in-out shadow-xl"
+       [ngClass]="{'translate-x-0': isSidebarOpen, '-translate-x-full': !isSidebarOpen}">
+    <!-- Logo and Title -->
+    <div class="flex items-center justify-center px-2 border-b border-blue-600 pb-6">
+      <div class="bg-white rounded-full p-2 mr-3">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+      </div>
+      <h2 class="text-xl font-bold">HRMS Admin</h2>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="space-y-2">
+      <a routerLink="/admin" routerLinkActive="bg-blue-700 shadow-lg" class="flex items-center py-3 px-4 rounded-lg transition-all duration-200 hover:bg-blue-700 hover:shadow-md">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+        Dashboard
+      </a>
+           <a routerLink="/admin/departments" routerLinkActive="bg-blue-700 shadow-lg" class="flex items-center py-3 px-4 rounded-lg transition-all duration-200 hover:bg-blue-700 hover:shadow-md">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+        Departments
+      </a>
+      <a routerLink="/admin/employees" routerLinkActive="bg-blue-700 shadow-lg" class="flex items-center py-3 px-4 rounded-lg transition-all duration-200 hover:bg-blue-700 hover:shadow-md">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+        </svg>
+        Employees
+      </a>
+ 
+           <a routerLink="/admin/users" routerLinkActive="bg-blue-700 shadow-lg" class="flex items-center py-3 px-4 rounded-lg transition-all duration-200 hover:bg-blue-700 hover:shadow-md">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+        Users
+      </a>
+               <a routerLink="/admin/attendance" routerLinkActive="bg-blue-700 shadow-lg" class="flex items-center py-3 px-4 rounded-lg transition-all duration-200 hover:bg-blue-700 hover:shadow-md">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        Attendance
+      </a>
+      <a routerLink="/admin/leaves" routerLinkActive="bg-blue-700 shadow-lg" class="flex items-center py-3 px-4 rounded-lg transition-all duration-200 hover:bg-blue-700 hover:shadow-md">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+        Leaves
+      </a>
+      <a routerLink="/admin/payroll" routerLinkActive="bg-blue-700 shadow-lg" class="flex items-center py-3 px-4 rounded-lg transition-all duration-200 hover:bg-blue-700 hover:shadow-md">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        Payroll
+      </a>
+      <a routerLink="/admin/reviews" routerLinkActive="bg-blue-700 shadow-lg" class="flex items-center py-3 px-4 rounded-lg transition-all duration-200 hover:bg-blue-700 hover:shadow-md">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        Performance Reviews
+      </a>
+      <button (click)="logout()" class="flex items-center w-full text-left py-3 px-4 rounded-lg transition-all duration-200 hover:bg-red-600 hover:shadow-md mt-8">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+        </svg>
+        Logout
+      </button>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex-1 min-w-0 transition-all duration-300" [ngClass]="{'md:ml-64': isSidebarOpen}">
+    <div class="p-6">
+      <!-- Header with toggle button -->
+      <div class="flex justify-between items-center mb-8">
+        <div class="flex items-center">
+          <button class="p-2 rounded-lg bg-white shadow-md text-blue-800 hover:bg-blue-50 transition-colors duration-200 mr-4" (click)="toggleSidebar()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          <h2 class="text-3xl font-bold text-gray-800">Admin Dashboard</h2>
+        </div>
+        <div class="flex items-center">
+          <div class="bg-white rounded-full p-2 shadow-md mr-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+            </svg>
+          </div>
+          <span class="text-gray-700 font-medium">Admin User</span>
+        </div>
+      </div>
+
+      <!-- Stats Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div class="bg-gradient-to-r from-blue-500 to-blue-600 p-6 rounded-xl shadow-lg text-white transform transition-transform duration-300 hover:scale-105">
+          <div class="flex justify-between items-center">
+            <div>
+              <h3 class="text-lg font-semibold">Total Employees</h3>
+              <p class="text-3xl font-bold mt-2">{{ stats.totalEmployees }}</p>
+            </div>
+            <div class="bg-blue-400 bg-opacity-30 rounded-full p-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+              </svg>
+            </div>
+          </div>
+          <p class="text-blue-100 text-sm mt-2">All active employees</p>
+        </div>
+
+        <div class="bg-gradient-to-r from-amber-500 to-amber-600 p-6 rounded-xl shadow-lg text-white transform transition-transform duration-300 hover:scale-105">
+          <div class="flex justify-between items-center">
+            <div>
+              <h3 class="text-lg font-semibold">Pending Leaves</h3>
+              <p class="text-3xl font-bold mt-2">{{ stats.pendingLeaves }}</p>
+            </div>
+            <div class="bg-amber-400 bg-opacity-30 rounded-full p-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+          </div>
+          <p class="text-amber-100 text-sm mt-2">Requiring approval</p>
+        </div>
+
+        <div class="bg-gradient-to-r from-green-500 to-green-600 p-6 rounded-xl shadow-lg text-white transform transition-transform duration-300 hover:scale-105">
+          <div class="flex justify-between items-center">
+            <div>
+              <h3 class="text-lg font-semibold">Departments</h3>
+              <p class="text-3xl font-bold mt-2">{{ stats.departments }}</p>
+            </div>
+            <div class="bg-green-400 bg-opacity-30 rounded-full p-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+          </div>
+          <p class="text-green-100 text-sm mt-2">Active departments</p>
+        </div>
+
+        <div class="bg-gradient-to-r from-purple-500 to-purple-600 p-6 rounded-xl shadow-lg text-white transform transition-transform duration-300 hover:scale-105">
+          <div class="flex justify-between items-center">
+            <div>
+              <h3 class="text-lg font-semibold">Recent Reviews</h3>
+              <p class="text-3xl font-bold mt-2">{{ stats.reviews }}</p>
+            </div>
+            <div class="bg-purple-400 bg-opacity-30 rounded-full p-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+          </div>
+          <p class="text-purple-100 text-sm mt-2">Performance reviews</p>
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Quick Actions</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <a routerLink="/admin/employees" class="bg-blue-50 hover:bg-blue-100 border-l-4 border-blue-500 p-4 rounded-lg transition-all duration-200 transform hover:-translate-y-1">
+            <div class="flex items-center">
+              <div class="bg-blue-100 p-2 rounded-lg mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+                </svg>
+              </div>
+              <span class="font-medium text-gray-700">Manage Employees</span>
+            </div>
+          </a>
+          <a routerLink="/admin/leaves" class="bg-amber-50 hover:bg-amber-100 border-l-4 border-amber-500 p-4 rounded-lg transition-all duration-200 transform hover:-translate-y-1">
+            <div class="flex items-center">
+              <div class="bg-amber-100 p-2 rounded-lg mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <span class="font-medium text-gray-700">Manage Leaves</span>
+            </div>
+          </a>
+          <a routerLink="/admin/payroll" class="bg-green-50 hover:bg-green-100 border-l-4 border-green-500 p-4 rounded-lg transition-all duration-200 transform hover:-translate-y-1">
+            <div class="flex items-center">
+              <div class="bg-green-100 p-2 rounded-lg mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <span class="font-medium text-gray-700">Manage Payroll</span>
+            </div>
+          </a>
+          <a routerLink="/admin/reviews" class="bg-purple-50 hover:bg-purple-100 border-l-4 border-purple-500 p-4 rounded-lg transition-all duration-200 transform hover:-translate-y-1">
+            <div class="flex items-center">
+              <div class="bg-purple-100 p-2 rounded-lg mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <span class="font-medium text-gray-700">Manage Reviews</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

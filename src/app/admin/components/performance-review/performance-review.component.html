@@ -1,0 +1,69 @@
+<div class="min-h-screen bg-gray-100 p-6">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-2xl font-bold mb-6">Manage Performance Reviews</h2>
+    <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+      <form (ngSubmit)="addReview()" class="space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label for="employeeId" class="block text-sm font-medium text-gray-700">Employee</label>
+            <select id="employeeId" [(ngModel)]="newReview.EmployeeID" name="employeeId" required
+                    class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md">
+              <option *ngFor="let emp of employees" [value]="emp.EmployeeID">{{ emp.FirstName }} {{ emp.LastName }}</option>
+            </select>
+          </div>
+          <div>
+            <label for="reviewerId" class="block text-sm font-medium text-gray-700">Reviewer</label>
+            <select id="reviewerId" [(ngModel)]="newReview.ReviewerID" name="reviewerId" required
+                    class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md">
+              <option *ngFor="let emp of employees" [value]="emp.EmployeeID">{{ emp.FirstName }} {{ emp.LastName }}</option>
+            </select>
+          </div>
+          <div>
+            <label for="reviewDate" class="block text-sm font-medium text-gray-700">Review Date</label>
+            <input id="reviewDate" type="date" [(ngModel)]="newReview.ReviewDate" name="reviewDate" required
+                   class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md">
+          </div>
+          <div>
+            <label for="score" class="block text-sm font-medium text-gray-700">Score (1-5)</label>
+            <input id="score" type="number" [(ngModel)]="newReview.Score" name="score" required min="1" max="5"
+                   class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md">
+          </div>
+          <div class="md:col-span-2">
+            <label for="comments" class="block text-sm font-medium text-gray-700">Comments</label>
+            <textarea id="comments" [(ngModel)]="newReview.Comments" name="comments"
+                      class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">Add Review</button>
+      </form>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+      <div class="overflow-x-auto">
+        <table class="w-full table-auto">
+          <thead>
+            <tr class="bg-gray-200">
+              <th class="px-4 py-2">Employee</th>
+              <th class="px-4 py-2">Reviewer</th>
+              <th class="px-4 py-2">Review Date</th>
+              <th class="px-4 py-2">Score</th>
+              <th class="px-4 py-2">Comments</th>
+              <th class="px-4 py-2">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let review of reviews" class="border-b">
+              <td class="px-4 py-2">{{ review.EmployeeFirstName }} {{ review.EmployeeLastName }}</td>
+              <td class="px-4 py-2">{{ review.ReviewerFirstName }} {{ review.ReviewerLastName }}</td>
+              <td class="px-4 py-2">{{ review.ReviewDate }}</td>
+              <td class="px-4 py-2">{{ review.Score }}</td>
+              <td class="px-4 py-2">{{ review.Comments || 'N/A' }}</td>
+              <td class="px-4 py-2">
+                <button (click)="deleteReview(review.ReviewID)" class="bg-gray-600 text-white py-1 px-2 rounded-md hover:bg-gray-700">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
