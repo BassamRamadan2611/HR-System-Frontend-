@@ -77,43 +77,6 @@ Admin Module → HR management features
 
 
 
--------------------------------------------------------------------------------------------------------------------------------
-🗺️ Routes Overview
-
-User Panel (/user)
-
-/user → Dashboard
-
-/user/profile → Profile
-
-/user/leave-request → Leave request
-
-/user/attendance-request → Attendance request
-
-/user/team → Team (manager only)
-
-Admin Panel (/admin)
-
-/admin → Dashboard
-
-/admin/departments → Departments
-
-/admin/employees → Employees
-
-/admin/users → Users
-
-/admin/leaves → Leaves
-
-/admin/attendance → Attendance
-
-/admin/payroll → Payroll (WIP)
-
-/admin/reviews → Performance Reviews (WIP)
-
-Auth
-
-/login, /register
-
 
 
 ---------------------------------------------------------------------------------------------------------
