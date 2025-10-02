@@ -8,9 +8,10 @@ Provides role-based dashboards for Employees, Managers, and Admins with a clean 
 This repository contains the frontend application of the HRMS.
 It focuses on usability, performance, and accessibility, offering an interface for daily HR tasks such as attendance, leaves, profiles, team management, and admin workflows.
 
-Note: Backend APIs are consumed but not included here (this repo demonstrates only frontend architecture, UI/UX, and Angular skills).
 
 ✨ Features
+
+---------------------------------------------------------------------
 👨‍💼 User Panel
 
 Personal Dashboard
@@ -23,6 +24,7 @@ Submit Attendance Requests
 
 Managers: Manage their own team
 
+---------------------------------------------------------------------
 🛠️ Admin Panel
 
 Employee management
@@ -39,13 +41,16 @@ Payroll (in progress)
 
 Performance Reviews (in progress)
 
+
+
+---------------------------------------------------------------------
 🔑 Shared
 
 JWT-based Authentication (Login / Register)
 
 Role-based route guards (User / Manager / Admin)
 
-Reusable components (forms, modals, tables)
+--------------------------------------------------------------------------------
 
 🧩 Project Structure
 
@@ -54,6 +59,9 @@ Shared Module → Authentication, guards, services, reusable UI
 User Module → Employee & Manager features
 
 Admin Module → HR management features
+
+
+-------------------------------------------------------------------------------
 
 🛠️ Tech Stack
 
@@ -67,6 +75,9 @@ Admin Module → HR management features
 
 🛡 Route Guards (role-based access)
 
+
+
+-------------------------------------------------------------------------------------------------------------------------------
 🗺️ Routes Overview
 
 User Panel (/user)
@@ -103,6 +114,9 @@ Auth
 
 /login, /register
 
+
+
+---------------------------------------------------------------------------------------------------------
 🚧 Status
 
 ✅ Core Modules completed
@@ -117,6 +131,4 @@ Auth
 
 🎨 Clean UI & UX with TailwindCSS
 
-⚡ Optimized with lazy loading & small bundles
 
-♿ Accessibility-first design (a11y)
