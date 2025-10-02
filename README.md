@@ -3,11 +3,6 @@
 Modern, responsive Human Resource Management System (HRMS) frontend built with Angular.
 Provides role-based dashboards for Employees, Managers, and Admins with a clean UX/UI.
 
-🚀 Project Summary
-
-This repository contains the frontend application of the HRMS.
-It focuses on usability, performance, and accessibility, offering an interface for daily HR tasks such as attendance, leaves, profiles, team management, and admin workflows.
-
 
 ✨ Features
 
