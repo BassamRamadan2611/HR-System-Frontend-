@@ -1,27 +1,77 @@
-# HrApp
+🚀 HR Management System (Frontend - Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+This project is a Human Resource Management System (HRMS) built with Angular.
+It provides separate Admin and User/Manager panels with authentication, role-based access control, and a clean modular structure.
 
-## Development server
+✨ Features
+👨‍💼 User Panel
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Personal dashboard
 
-## Code scaffolding
+Profile management
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Submit leave requests
 
-## Build
+Submit attendance requests
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Managers: manage their own teams
 
-## Running unit tests
+🛠️ Admin Panel
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Employee management
 
-## Running end-to-end tests
+Department management
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+User/role management
 
-## Further help
+Attendance approvals
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Leave approvals
+
+Payroll (under development)
+
+Performance reviews (under development)
+
+🔑 Shared
+
+JWT authentication (Login/Register)
+
+Guards for role-based access
+
+Reusable components and services
+
+🧩 Project Structure
+
+Shared Module → Auth, guards, reusable UI & services
+
+User Module → Employee & manager features
+
+Admin Module → HR management & approvals
+
+🛠️ Tech Stack
+
+Angular (latest)
+
+TypeScript
+
+TailwindCSS for styling
+
+JWT Authentication
+
+Role-based Guards
+
+🚧 Status
+
+✅ Core modules completed
+
+🚀 Payroll & Performance Review modules in progress
+
+📌 Highlights
+
+Modular architecture for scalability
+
+Role-based routing (Admin / User / Manager)
+
+Clean UI & UX with Angular + Tailwind
+
+Best practices in guards, services, and lazy-loaded modules
