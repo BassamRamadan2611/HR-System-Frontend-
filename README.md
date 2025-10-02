@@ -1,7 +1,7 @@
 🚀 HR Management System (Frontend - Angular)
 
-This project is a Human Resource Management System (HRMS) built with Angular.
-It provides separate Admin and User/Manager panels with authentication, role-based access control, and a clean modular structure.
+A Human Resource Management System (HRMS) built with Angular, featuring separate Admin and User/Manager panels.
+Includes authentication, role-based access control, and a modular architecture for scalability.
 
 ✨ Features
 👨‍💼 User Panel
@@ -22,7 +22,7 @@ Employee management
 
 Department management
 
-User/role management
+User & role management
 
 Attendance approvals
 
@@ -34,15 +34,15 @@ Performance reviews (under development)
 
 🔑 Shared
 
-JWT authentication (Login/Register)
+JWT authentication (Login / Register)
 
-Guards for role-based access
+Role-based guards for access control
 
-Reusable components and services
+Reusable components & services
 
 🧩 Project Structure
 
-Shared Module → Auth, guards, reusable UI & services
+Shared Module → Authentication, guards, reusable UI & services
 
 User Module → Employee & manager features
 
@@ -50,15 +50,15 @@ Admin Module → HR management & approvals
 
 🛠️ Tech Stack
 
-Angular (latest)
+⚡ Angular (latest)
 
-TypeScript
+🟦 TypeScript
 
-TailwindCSS for styling
+🎨 TailwindCSS for styling
 
-JWT Authentication
+🔑 JWT Authentication
 
-Role-based Guards
+🛡 Role-based Guards
 
 🚧 Status
 
@@ -68,10 +68,10 @@ Role-based Guards
 
 📌 Highlights
 
-Modular architecture for scalability
+📂 Modular architecture for scalability
 
-Role-based routing (Admin / User / Manager)
+🔒 Role-based routing (Admin / User / Manager)
 
-Clean UI & UX with Angular + Tailwind
+🎨 Clean UI & UX with Angular + Tailwind
 
-Best practices in guards, services, and lazy-loaded modules
+🧑‍💻 Best practices in guards, services & lazy-loaded modules
